@@ -12,7 +12,7 @@ class Category(models.Model):
 class Book(models.Model):
     title=models.CharField(max_length=256)
     description=models.TextField()
-    image=models.ImageField(upload_to='books/media/book_images/')
+    image=models.ImageField(upload_to='books/')
     price=models.PositiveIntegerField()
     categories=models.ManyToManyField(Category, related_name="categories")
     borrower=models.ManyToManyField(User,blank=True)
